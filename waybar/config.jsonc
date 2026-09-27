@@ -1,0 +1,81 @@
+{
+    "height": 48,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/brilliant", "custom/wallpaper", "backlight", "pulseaudio", "power-profiles-daemon", "battery", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "focused": "󱓻",
+            "default": "󱓼"
+        }
+    },
+
+    "hyprland/window": {
+        "rewrite": {
+            "": "hyprland"
+        }
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "reverse-scrolling": true
+    },
+
+    "custom/arch": {
+        "format": " 󰣇 ",
+        "tooltip-format": "I Use Arch btw",
+        "on-click": "/home/kinoko/.config/hypr/scripts/fuzzel_powermenu.sh"
+    },
+
+    "clock": {
+        "interval": 5,
+        "format": "󰥔 {:%H:%M}"
+    },
+
+    "pulseaudio": {
+        "format-icons": ["󰖀", "󰕾"],
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "reverse-scrolling": true
+    },
+
+    "battery": {
+        "interval": 10,
+        "format-charging": "󰂄 {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁿", "󰂀", "󰂂", "󰁹"]
+    },
+
+    "custom/wallpaper": {
+        "interval": 10,
+        "format" : "󰸉",
+        "on-click": "waypaper",
+        "tooltip-format": "Change Wallpaper"
+   },
+
+       "custom/brilliant": {
+        "interval": 10,
+        "format" : "󰎇",
+        "on-click": "mpv ~/brilliant.mp3",
+        "tooltip-format": "brill it'"
+   },
+
+    "power-profiles-daemon": {
+        "format": "{icon}   {profile}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+        }
+    }
+}

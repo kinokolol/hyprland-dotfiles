@@ -1,0 +1,45 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/2.66.0/doc/json_schema.json",
+
+  "logo": {
+    "type": "kitty-direct",
+    "source": "/home/kinoko/.config/fastfetch/reimu2.png",
+    "width": 30,
+    "height": 15
+  },
+
+  "display": {
+    "color": {
+      "keys": "yellow",
+      "title": "magenta",
+      "output": "blue",
+      "separator": "red"
+    }
+  },
+
+  "modules": [
+    "break",
+    "title",
+    "separator",
+    "os",
+    {
+      "type": "host",
+      "format": "{/2}{-}{/}{2}{?3} {3}{?}"
+    },
+    "kernel",
+    "uptime",
+    "break",
+    "shell",
+    "terminal",
+    "break",
+    "cpu",
+    {
+      "type": "gpu",
+      "key": "GPU"
+    },
+    "memory",
+    "break",
+    "colors"
+  ]
+}
+
